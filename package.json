@@ -4,6 +4,7 @@
   "description": "React component based icons library",
   "main": "index.js",
   "module": "dist/index.js",
+  "files": ["dist"],
   "scripts": {
     "prebuild": "rimraf src && rimraf dist",
     "build": "npm run transformsvg && rollup -c",
