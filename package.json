@@ -3,13 +3,27 @@
   "version": "1.0.0",
   "description": "React component based icons library",
   "main": "index.js",
+  "module": "dist/index.js",
   "scripts": {
-    "svgr": "svgr --icon --title-prop -d src -- assets"
+    "prebuild": "rimraf src && rimraf dist",
+    "build": "npm run transformsvg && rollup -c",
+    "transformsvg": "svgr --icon --title-prop -d src -- assets"
   },
   "author": "Karandeep Singh",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "@rollup/plugin-babel": "^6.0.4",
     "@svgr/cli": "^8.1.0",
-    "rimraf": "^5.0.8"
+    "rimraf": "^5.0.8",
+    "rollup": "^2.61.1",
+    "rollup-plugin-filesize": "^9.1.1"
+  },
+  "dependencies": {
+    "i": "^0.3.7",
+    "npm": "^10.8.1",
+    "rollup-plugin-filesize": "^10.0.0"
   }
 }
