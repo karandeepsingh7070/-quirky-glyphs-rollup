@@ -1,0 +1,15 @@
+{
+  "name": "@quirky/glyphs",
+  "version": "1.0.0",
+  "description": "React component based icons library",
+  "main": "index.js",
+  "scripts": {
+    "svgr": "svgr --icon --title-prop -d src -- assets"
+  },
+  "author": "Karandeep Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "rimraf": "^5.0.8"
+  }
+}
